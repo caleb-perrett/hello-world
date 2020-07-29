@@ -46,3 +46,9 @@ def hello_world():
     documents = engine.execute('select * from documents')
 
     return render_template('nutrition.html', documents = documents)
+
+@app.route('/')
+def hello_world():
+    documents = engine.execute('select * from documents')
+
+    return render_template('nutrition.html', documents = documents)
