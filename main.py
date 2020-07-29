@@ -40,3 +40,9 @@ db = SQLAlchemy(app)
 engine = create_engine('sqlite:///C:/Users/Chris/PycharmProjects/jobcosting/nutrition.db')
 db.Model.metadata.reflect(db.engine)
 metadata = MetaData(bind=engine)
+
+@app.route('/')
+def hello_world():
+    documents = engine.execute('select * from documents')
+
+    return render_template('nutrition.html', documents = documents)
