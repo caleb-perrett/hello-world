@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+          <div class="row">
+              <div class="col-sm"><h2 class="mb-4">List of Jobs</h2></div>
+              <div class="col-sm"></div>
+                 <div class="col-sm">  <a class="btn btn-primary" href={{url_for('createJob')}} role="button">Create Job</a></div>
+                 <div class="col-sm">  <a class="btn btn-primary" href={{url_for('listofsteps')}} role="button">List of Steps</a></div>
+              <div class="col-sm">  <a class="btn btn-primary" href={{url_for('step1')}} role="button">Step 1</a></div>
+                 <div class="col-sm">  <a class="btn btn-primary" href={{url_for('getJobData')}} role="button">Get Job Data</a></div>
+
+              <div class="col-sm">  <a class="btn btn-primary" href={{url_for('caleb')}} role="button">Caleb</a></div>
+
+
+
+          </div>
+
+
+          <table class="table">
+
+    <thead>
+
+    <tr>
+        <th>Job Number</th>
+        <th>Job Name</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for job in jobs %}
+
+    <tr>
+        <td>{{job.jobId}}</td>
+        <td>{{job.jobName}}</td>
+
+
+    </tr>
+    {% endfor %}
+
+
+
+    </tbody>
+
+    </table>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+{% endblock %}
