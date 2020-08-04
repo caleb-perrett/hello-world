@@ -48,4 +48,3 @@ def hello_world():
     return render_template('nutrition.html', documents = documents)
 
 
-print('This is a new day and this is some new code')
