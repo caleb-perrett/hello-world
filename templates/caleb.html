@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="col-sm">  <a class="btn btn-primary" href={{url_for('hello_world')}} role="button">Back Home</a></div>
+
+<div class="col-sm">  <a class="btn btn-primary" href={{url_for('hello_world')}} role="button">Create New Job</a></div>
+
+<h1>This is a LIST screen</h1>
+
+          <table class="table">
+
+            <thead>
+
+            <tr>
+                <th>Job Number</th>
+                <th>Job Name</th>
+                <th>Job Code NEW</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in calebsjobs %}
+
+            <tr>
+                <td><a href={{url_for('calebdetails', jobNumber=item.jobId)}}>{{item.jobId}}</a></td>
+                <td>{{item.jobName}}</td>
+                <td>{{item.jobCode}}</td>
+
+
+            </tr>
+    {% endfor %}
+
+
+
+
+
+{% endblock %}
+
