@@ -1,9 +1,6 @@
 # hello-world
-Hi all
+Steps for us to do in the next lesson
 
-Caleb here, i like coding!!!
-
-
-This is Chris and this is the change I have made to your code.
-
-This is even more changes.
+Create a document add page
+Create a document update page
+Route documents from the list to the details page
