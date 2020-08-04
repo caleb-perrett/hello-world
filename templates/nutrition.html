@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <a class="btn btn-primary" href={{url_for('createdocument')}} role="button">Create Job</a>
+          <div class="row">
+              <div class="col-sm"><h2 class="mb-4">List of documents</h2></div>
+              <div class="col-sm"></div>
+          </div>
+          <table class="table">
+    <thead>
+    <tr>
+        <th>Document ID</th>
+        <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for document in documents %}
+    <tr>
+        <td>{{document.documentId}}</td>
+        <td>{{document.title}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+{% endblock %}
